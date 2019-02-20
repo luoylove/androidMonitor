@@ -1,7 +1,6 @@
 package com.ly.event;
 
 import java.awt.Font;
-import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.JFrame;
@@ -22,7 +21,7 @@ import com.ly.biz.SaveLog;
 import com.ly.gui.MonitorFrame;
 import com.ly.utils.Util;
 
-public class CpuMonitorMouseEvent extends MouseAdapter{
+public class CpuMonitorMouseEvent extends BaseMousePressedEvent{
 	private MonitorFrame frmae;
 	
 	private SaveLog saveLog = null ;
@@ -33,6 +32,7 @@ public class CpuMonitorMouseEvent extends MouseAdapter{
 		this.frmae = frmae;
 	}
 	
+	@Override
 	public void mousePressed(MouseEvent e) {
 		String packageName = frmae.packageTextField.getText();
 		

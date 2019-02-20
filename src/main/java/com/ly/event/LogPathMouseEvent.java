@@ -1,12 +1,11 @@
 package com.ly.event;
 
-import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.JFileChooser;
 import javax.swing.JTextField;
 
-public class LogPathMouseEvent extends MouseAdapter{
+public class LogPathMouseEvent extends BaseMousePressedEvent{
 	private JTextField textField;
 	
 	public LogPathMouseEvent(JTextField textField) {

@@ -1,7 +1,6 @@
 package com.ly.event;
 
 import java.awt.GridLayout;
-import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.JFrame;
@@ -16,7 +15,7 @@ import com.ly.gui.MonitorChart;
 import com.ly.gui.MonitorFrame;
 import com.ly.utils.Util;
 
-public class MemMonitorMouseEvent extends MouseAdapter{
+public class MemMonitorMouseEvent extends BaseMousePressedEvent{
 	private MonitorFrame frmae;
 	
 	private Boolean isWriteLog = false;
@@ -27,6 +26,7 @@ public class MemMonitorMouseEvent extends MouseAdapter{
 		this.frmae = frmae;
 	}
 	
+	@Override
 	public void mousePressed(MouseEvent e) {
 		String packageName = frmae.packageTextField.getText();
 		
